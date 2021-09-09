@@ -1,3 +1,4 @@
+import 'package:cs4750_mobileapp/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:sign_button/sign_button.dart';
 
@@ -15,7 +16,8 @@ class _LoginPageState extends State<LoginPage> {
           Expanded(
             flex: 30,
             child: Image(
-              image: NetworkImage('https://image.pngaaa.com/57/3489057-middle.png'),
+              image: NetworkImage(
+                  'https://image.pngaaa.com/57/3489057-middle.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -26,15 +28,16 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                   margin: EdgeInsets.only(top: 20, bottom: 20),
                   child: Text(
-                        'Login',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    'Login',
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
                     ),
+                  ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 35, right: 35, top: 10, bottom: 10),
+                  margin:
+                      EdgeInsets.only(left: 35, right: 35, top: 10, bottom: 10),
                   child: TextField(
                     obscureText: false,
                     decoration: InputDecoration(
@@ -44,7 +47,8 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 35, right: 35, top: 10, bottom: 10),
+                  margin:
+                      EdgeInsets.only(left: 35, right: 35, top: 10, bottom: 10),
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
@@ -56,12 +60,11 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                     margin: EdgeInsets.only(top: 10, bottom: 10),
                     child: Text(
-                        'Forgot password?',
-                        style: TextStyle (
-                          color: Colors.red,
-                        ),
-                    )
-                ),
+                      'Forgot password?',
+                      style: TextStyle(
+                        color: Colors.red,
+                      ),
+                    )),
                 Container(
                   margin: EdgeInsets.only(top: 30, bottom: 30),
                   width: 200,
@@ -71,7 +74,13 @@ class _LoginPageState extends State<LoginPage> {
                         side: BorderSide(color: Colors.red),
                       ),
                       child: Text('Login'),
-                      onPressed: () {}),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => UserProfilePage()),
+                        );
+                      }
+                      ),
                 ),
               ],
             ),
@@ -81,11 +90,7 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(right: 20),
-                  child: Text(
-                      'App logo:'
-                  )
-              ),
+                  margin: EdgeInsets.only(right: 20), child: Text('App logo:')),
               SignInButton.mini(
                 buttonType: ButtonType.facebook,
                 buttonSize: ButtonSize.small,
