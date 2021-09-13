@@ -14,11 +14,9 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         children: [
           Expanded(
-            flex: 30,
+            flex: 20,
             child: Image(
-              image: NetworkImage(
-                  'https://image.pngaaa.com/57/3489057-middle.png'),
-              fit: BoxFit.cover,
+                image: AssetImage('assets/LPL_logo.png')
             ),
           ),
           Expanded(
@@ -37,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Container(
                   margin:
-                      EdgeInsets.only(left: 35, right: 35, top: 10, bottom: 10),
+                  EdgeInsets.only(left: 35, right: 35, top: 10, bottom: 10),
                   child: TextField(
                     obscureText: false,
                     decoration: InputDecoration(
@@ -48,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Container(
                   margin:
-                      EdgeInsets.only(left: 35, right: 35, top: 10, bottom: 10),
+                  EdgeInsets.only(left: 35, right: 35, top: 10, bottom: 10),
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
@@ -80,14 +78,14 @@ class _LoginPageState extends State<LoginPage> {
                           MaterialPageRoute(builder: (context) => UserProfilePage()),
                         );
                       }
-                      ),
+                  ),
                 ),
               ],
             ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                   margin: EdgeInsets.only(right: 20), child: Text('App logo:')),
@@ -98,6 +96,11 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SignInButton.mini(
                 buttonType: ButtonType.google,
+                buttonSize: ButtonSize.small,
+                onPressed: () {},
+              ),
+              SignInButton.mini(
+                buttonType: ButtonType.microsoft,
                 buttonSize: ButtonSize.small,
                 onPressed: () {},
               ),
