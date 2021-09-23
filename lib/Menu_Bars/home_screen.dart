@@ -1,8 +1,12 @@
+import 'package:cs4750_mobileapp/Menu_Bars/Friends_Screen.dart';
+import 'package:cs4750_mobileapp/Menu_Bars/QRScan.dart';
+import 'package:cs4750_mobileapp/Menu_Bars/Settings.dart';
 import 'package:cs4750_mobileapp/constants/color_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:cs4750_mobileapp/home_screen.dart';
-import 'package:cs4750_mobileapp/card_screen.dart';
+import 'package:cs4750_mobileapp/Menu_Bars/user_profile.dart';
+import 'package:cs4750_mobileapp/Menu_Bars/user_cards.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 class UserProfilePage extends StatefulWidget {
 
@@ -15,9 +19,10 @@ class _UserProfilePageState extends State<UserProfilePage> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    CardScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    UserCardsPage(),
+    QRScanPage(),
+    FriendsPage(),
+    SettingsPage(),
   ];
 
   @override
@@ -32,7 +37,8 @@ class _UserProfilePageState extends State<UserProfilePage> {
           unselectedItemColor: Colors.grey,
           items: [
             BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.home),label: "Home"),
-            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.qrcode),label: "QR_code"),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.database),label: "Cards"),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.qrcode),label: "QRScan"),
             BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.userFriends),label: "Friends"),
             BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.cog),label: "Settings"),
           ],
@@ -40,8 +46,10 @@ class _UserProfilePageState extends State<UserProfilePage> {
           onTap: (int index) {
             setState(() {
               _selectedIndex = index;
-            });
-          }),
+            }
+            );
+          }
+          ),
     );
   }
 }

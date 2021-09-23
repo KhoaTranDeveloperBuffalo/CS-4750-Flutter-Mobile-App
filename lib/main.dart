@@ -1,4 +1,4 @@
-import 'package:cs4750_mobileapp/login_page.dart';
+import 'package:cs4750_mobileapp/Login_Pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

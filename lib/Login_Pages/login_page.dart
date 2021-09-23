@@ -1,6 +1,9 @@
-import 'package:cs4750_mobileapp/user_profile.dart';
+import 'package:cs4750_mobileapp/Menu_Bars/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sign_button/sign_button.dart';
+
+import 'forgot_password.dart';
+import 'sign_up.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -56,15 +59,25 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Container(
-                    margin: EdgeInsets.only(top: 10, bottom: 10),
-                    child: Text(
-                      'Forgot password?',
-                      style: TextStyle(
-                        color: Colors.red,
+                  margin: EdgeInsets.only(top: 5),
+                    child: new GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                            builder: (context) => ForgotPassWordPage()),
+                        );
+                      },
+                      child: new Text(
+                          "Forgot Password?",
+                        style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.bold
                       ),
-                    )),
+                      ),
+                    ),
+                ),
                 Container(
-                  margin: EdgeInsets.only(top: 30, bottom: 30),
+                  margin: EdgeInsets.only(top: 30, bottom: 20),
                   width: 200,
                   child: RaisedButton(
                       shape: RoundedRectangleBorder(
@@ -80,10 +93,27 @@ class _LoginPageState extends State<LoginPage> {
                       }
                   ),
                 ),
+                Container(
+                  child: new GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SignUpPage()),
+                      );
+                    },
+                    child: new Text(
+                      "Create new Account",
+                      style: TextStyle(
+                        color: Colors.red,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
-          Row(
+         /* Row(
             mainAxisAlignment: MainAxisAlignment.center,
             //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -105,7 +135,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {},
               ),
             ],
-          ),
+          ),*/
         ],
       ),
     );
