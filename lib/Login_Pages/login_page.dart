@@ -1,6 +1,5 @@
 import 'package:cs4750_mobileapp/Menu_Bars/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:sign_button/sign_button.dart';
 
 import 'forgot_password.dart';
 import 'sign_up.dart';
@@ -43,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                     obscureText: false,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Email',
+                      labelText: 'Username',
                     ),
                   ),
                 ),

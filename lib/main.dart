@@ -13,6 +13,11 @@ Widget build(BuildContext context) {
     title: 'Flutter Demo',
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
+      scaffoldBackgroundColor: Colors.white,
+      appBarTheme: AppBarTheme(
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
       primarySwatch: Colors.blue,
     ),
     home: LoginPage(),

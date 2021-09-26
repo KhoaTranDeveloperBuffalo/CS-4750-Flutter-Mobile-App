@@ -11,7 +11,8 @@ class FriendsPage extends StatelessWidget {
             Expanded(
               flex: 20,
               child: Image(
-                  image: AssetImage('assets/LPL_logo.png')
+                  image: AssetImage('assets/LPL_logo.png'),
+                  color: Color.fromRGBO(255,0,0,0.19),
               ),
             ),
           ],

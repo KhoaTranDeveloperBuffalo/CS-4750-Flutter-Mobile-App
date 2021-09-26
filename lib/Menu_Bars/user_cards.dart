@@ -7,20 +7,18 @@ class UserCardsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(
-      children: [
-        Container(
-          child: Expanded(
-            flex: 20,
-            child: Image(
-              image: AssetImage('assets/LPL_logo.png'),
-              color: Color.fromRGBO(255,0,0,0.19),
+          children: [
+            Container(
+              child: Expanded(
+                flex: 20,
+                child: Image(
+                  image: AssetImage('assets/LPL_logo.png'),
+                  color: Color.fromRGBO(255,0,0,0.19),
+                ),
+              ),
             ),
-          ),
-        ),
 
-      ],
-    ));
+          ],
+        ));
   }
 }
-
-
